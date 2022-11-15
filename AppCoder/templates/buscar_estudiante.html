@@ -1,0 +1,20 @@
+<form action="" method="get">
+
+    <input type="text" name="apellido" id="apellido">
+
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% if estudiantes %}
+    <ul>
+    {% for estudiante in estudiantes  %}
+        <li>Nombre {{estudiante.nombre}}{{estudiante.apellido}} y el email: {{estudiante.email}}</li>
+    {% endfor %}
+    </ul>
+
+{% else %}
+    
+<P>No hay datoss</P>
+  
+{% endif %}
